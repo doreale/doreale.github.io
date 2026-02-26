@@ -453,46 +453,120 @@ opacity:.7;
   border: 0;
 }
 
-/* MOBILE */
+/* ================= MOBILE FIX ================= */
 
-@media(max-width:768px){
-.hero h1{font-size:42px}
-section{padding:80px 8%}
+@media (max-width:768px){
+
+/* NAVBAR */
+
+nav{
+  padding:14px 6%;
+  flex-wrap:wrap;
+}
+
+nav div{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+}
+
+nav a{
+  margin:0;
+  font-size:13px;
+}
+
+/* HERO */
+
+.hero{
+  height:90vh;
+}
+
+.hero img{
+  height:140px !important;
+}
+
+.hero p{
+  font-size:16px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:60px 6%;
+}
+
+h2{
+  font-size:28px;
+}
+
+p{
+  font-size:15px;
+}
+
+/* BOX */
+
+.box{
+  padding:24px;
+}
+
+/* SLIDERS */
+
+.slider-guest,
+.slider-rooms,
+.slider-food{
+  height:220px;
+}
+
+/* CTA */
+
+.cta{
+  padding:40px 20px;
+}
+
+/* BUTTON */
+
+.btn{
+  padding:12px 26px;
+  font-size:14px;
+}
+
+/* FLOATING ICONS */
+
+.social-float{
+  right:12px;
+  bottom:90px;
+}
+
+.social-float a{
+  width:42px;
+  height:42px;
+  font-size:18px;
+}
+
+.whatsapp-float{
+  width:48px;
+  height:48px;
+  font-size:24px;
+  right:12px;
+  bottom:20px;
+}
+
+/* MAP */
+
+.map-container{
+  height:280px;
+}
+
+}
+
+img{
+  max-width:100%;
+  height:auto;
 }
 </style>
 </head>
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-});
 
-document.querySelectorAll('.pop-section').forEach(section => {
-  observer.observe(section);
-});
-</script>
-<div class="social-float">
-
-  <a href="https://instagram.com/yourpage" target="_blank" class="insta">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="https://facebook.com/yourpage" target="_blank" class="fb">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-
-  <a href="https://youtube.com/yourchannel" target="_blank" class="yt">
-    <i class="fab fa-youtube"></i>
-  </a>
-	<a href="https://api.whatsapp.com/send?phone=919712028958&text=Hello,Got%20Reference%20from%20your%20Website.%20Want%20to%20know%20more%20about%20your%20Services%20and%20Rates."
-	target="_blank"
-	class="whatsapp-float">
-	<i class="fab fa-whatsapp"></i>
-	</a>
-</div>
 <body>
 
 <nav>
@@ -646,7 +720,7 @@ document.querySelectorAll('.pop-section').forEach(section => {
 </section>
 
 <!-- POLICIES -->
-<section class="comfort-section" id="amenities">
+<section class="comfort-section" id="info">
   <div class="box">
     <h2 class="card show">Guest Information</h2>
 
@@ -684,8 +758,12 @@ document.querySelectorAll('.pop-section').forEach(section => {
     <h2>Find Us on Map</h2>
 
     <div class="map-container">
- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13825.460921195809!2d78.16510006738275!3d29.9689320263313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909473fe2d1c68f%3A0x242784151491cc89!2sHotel%20O%20De%20Oreal!5e0!3m2!1sen!2sin!4v1772107457067!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-	
+	<iframe
+	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13825.460921195809!2d78.16510006738275!3d29.9689320263313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909473fe2d1c68f%3A0x242784151491cc89!2sHotel%20O%20De%20Oreal!5e0!3m2!1sen!2sin!4v1772107457067!5m2!1sen!2sin"
+	loading="lazy"
+	referrerpolicy="no-referrer-when-downgrade"
+	allowfullscreen>
+	</iframe>
     </div>
 	</br><a href="tel:+919712028958" class="btn">Connect Now...!</a>
   </div>
@@ -693,5 +771,37 @@ document.querySelectorAll('.pop-section').forEach(section => {
 <footer>
 <p>© 2026 O De Oreal — All Rights Reserved</p>
 </footer>
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.pop-section').forEach(section => {
+  observer.observe(section);
+});
+</script>
+<div class="social-float">
+
+  <a href="https://instagram.com/yourpage" target="_blank" class="insta">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <a href="https://facebook.com/yourpage" target="_blank" class="fb">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+  <a href="https://youtube.com/yourchannel" target="_blank" class="yt">
+    <i class="fab fa-youtube"></i>
+  </a>
+	<a href="https://api.whatsapp.com/send?phone=919712028958&text=Hello,Got%20Reference%20from%20your%20Website.%20Want%20to%20know%20more%20about%20your%20Services%20and%20Rates."
+	target="_blank"
+	class="whatsapp-float">
+	<i class="fab fa-whatsapp"></i>
+	</a>
+</div>
 </body>
 </html>
